@@ -30,7 +30,8 @@ public class UsuarioConverter implements Converter {
 		writeNode(writer, "login", usuario.getLogin());
 		writeNode(writer, "ultimoAcesso", dateFormat.format(usuario.getUltimoAcesso()));
 		writeNode(writer, "senha", usuario.getSenha());
-		writeNode(writer, "pergunta", "Que macumba é essa?");
+		writeNode(writer, "atributo1", "valor1");
+		writeNode(writer, "atributo2", "valor2");
 	}
 
 	@Override

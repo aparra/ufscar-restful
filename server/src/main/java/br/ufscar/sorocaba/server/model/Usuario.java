@@ -7,10 +7,17 @@ public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = -6046725949151883075L;
 	
+	private long id;
 	private String login;
 	private Date ultimoAcesso;
 	private String senha;
 	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	public String getLogin() {
 		return login;
 	}

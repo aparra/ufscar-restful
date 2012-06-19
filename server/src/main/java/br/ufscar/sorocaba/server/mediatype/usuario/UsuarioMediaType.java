@@ -5,6 +5,7 @@ import java.io.Serializable;
 import br.com.caelum.vraptor.restfulie.hypermedia.HypermediaResource;
 import br.com.caelum.vraptor.restfulie.relation.RelationBuilder;
 import br.ufscar.sorocaba.server.model.Usuario;
+import br.ufscar.sorocaba.server.service.UsuarioRest;
 
 public class UsuarioMediaType implements HypermediaResource, Serializable {
 
@@ -22,6 +23,7 @@ public class UsuarioMediaType implements HypermediaResource, Serializable {
 
 	@Override
 	public void configureRelations(RelationBuilder builder) {
-		builder.relation("fake").at("/fake");
+		builder.relation("editar").uses(UsuarioRest.class).editar(usuario);
+		builder.relation("remover").uses(UsuarioRest.class).remover(usuario);
 	}
 }
